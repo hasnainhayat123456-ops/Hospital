@@ -1,0 +1,64 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+
+.hero-section {
+  height: 100vh;
+  background-color: #003366;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 40%;
+  opacity: 0.15; /* subtle, adjust opacity to your liking */
+  pointer-events: none; /* so it doesn't block clicks */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-content span {
+  color: rgb(123, 66, 170);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+}
+
+
+
+.site-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 100px;      /* adjust size as needed */
+  height: auto;
+  z-index: 1050;     /* high enough to stay on top */
+  cursor: pointer;   /* makes it look clickable */
+  transition: transform 0.3s ease;
+}
+
+.site-logo:hover {
+  transform: scale(1.1); /* subtle zoom effect on hover */
+}
+
+
+
+

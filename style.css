@@ -1,0 +1,659 @@
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f5f9fc;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container for main content */
+main {
+    flex: 1 0 auto;
+    padding: 30px 15px;
+}
+
+/* Header */
+header {
+    background-color: green;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Navigation */
+nav {
+    background:  rgb(63, 81, 238);
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color:  rgb(63, 81, 238);
+    outline: none;
+}
+
+/* Main sections */
+main section {
+    background: white;
+    margin: 25px auto;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+main section:hover {
+    transform: translateY(-5px);
+}
+
+main section h2 {
+    color: rgb(63, 81, 238);
+    margin-bottom: 15px;
+    font-size: 2rem;
+    border-bottom: 3px solid  rgb(63, 81, 238);
+    padding-bottom: 8px;
+}
+
+main section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+main section ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+main section ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* Doctor and leadership profiles */
+.doctor-profiles, .leadership-profiles {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.doctor-profiles article, .leadership-profiles article {
+    flex: 1 1 280px;
+    background: #e9f5fc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.doctor-profiles article:hover, .leadership-profiles article:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.doctor-profiles article h3, .leadership-profiles article h3 {
+    color: #004466;
+    margin-bottom: 10px;
+}
+
+/* Call to action */
+#cta {
+    text-align: center;
+    background: #0077cc;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,119,204,0.4);
+    margin: 40px auto;
+    max-width: 700px;
+    font-size: 1.2rem;
+}
+
+#cta .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 40px;
+    background: white;
+    color: #0077cc;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#cta .btn:hover,
+#cta .btn:focus {
+    background-color: #005fa3;
+    color: white;
+    outline: none;
+}
+
+/* Contact section */
+#contact-info {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+#contact-info p {
+    margin-bottom: 12px;
+}
+
+#contact-info a {
+    color: #0077cc;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+#contact-info a:hover,
+#contact-info a:focus {
+    color: #005fa3;
+    outline: none;
+}
+
+/* Contact form */
+#contact-form-section {
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    background: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 7px 18px rgba(0,0,0,0.08);
+}
+
+#contact-form-section h2 {
+    margin-bottom: 25px;
+    color: #004466;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#contact-form-section form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #004466;
+}
+
+#contact-form-section input[type="text"],
+#contact-form-section input[type="email"],
+#contact-form-section input[type="tel"],
+#contact-form-section textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#contact-form-section input[type="text"]:focus,
+#contact-form-section input[type="email"]:focus,
+#contact-form-section input[type="tel"]:focus,
+#contact-form-section textarea:focus {
+    border-color: #0077cc;
+    outline: none;
+}
+
+#contact-form-section button {
+    display: block;
+    width: 100%;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0,119,204,0.5);
+    transition: background-color 0.3s ease;
+}
+
+#contact-form-section button:hover,
+#contact-form-section button:focus {
+    background-color: #005fa3;
+    outline: none;
+}
+
+/* Footer */
+footer {
+    background:  rgb(18, 39, 224);
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .doctor-profiles, .leadership-profiles {
+        flex-direction: column;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main section {
+        margin: 20px 10px;
+        padding: 20px 15px;
+    }
+
+    #cta {
+        font-size: 1rem;
+        padding: 20px 15px;
+    }
+
+    #cta .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Cards section on home page */
+#highlight-cards {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#highlight-cards h2 {
+  color:  rgb(63, 81, 238);
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  border-bottom: 3px solid  rgb(63, 81, 238);
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 3px solid  rgb(63, 81, 238);
+  flex-shrink: 0;
+}
+
+.card h3 {
+  margin: 20px 15px 10px 15px;
+  color:  rgb(63, 81, 238);
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0 15px 20px 15px;
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+
+/* Slider container */
+.slider-container {
+  max-width: 1000px;
+  margin: 40px auto 80px auto;
+  position: relative;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.slider-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color:  rgb(63, 81, 238);
+  font-size: 2.4rem;
+  border-bottom: 3px solid  rgb(63, 81, 238);
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* Wrapper hides overflow */
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Track holds all cards and scrolls horizontally */
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+/* Cards remain same, but remove margin-bottom to keep alignment */
+.card {
+  flex: 0 0 300px;
+  margin-right: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 3px solid  rgb(63, 81, 238);
+  flex-shrink: 0;
+}
+
+.card h3 {
+  margin: 20px 15px 10px 15px;
+  color:  rgb(63, 81, 238);
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0 15px 20px 15px;
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+/* Slider buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color:  rgb(63, 81, 238);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 15px  rgb(63, 81, 238);
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.slider-btn:hover {
+  background-color:  rgb(22, 43, 231);
+}
+
+.prev-btn {
+  left: 5px;
+}
+
+.next-btn {
+  right: 5px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .slider-container {
+    padding: 0 20px;
+  }
+
+  .card {
+    flex: 0 0 260px;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    flex: 0 0 220px;
+  }
+
+  .slider-btn {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+#highlight-cards {
+  max-width: 1000px;
+  margin: 40px auto 80px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#highlight-cards h2 {
+  color:  rgb(63, 81, 238);
+  font-size: 2.4rem;
+  border-bottom: 3px solid  rgb(63, 81, 238);
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 30px;
+}
+
+.slider-container {
+  position: relative;
+  padding: 0 40px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  gap: 25px;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+/* Fixed width for cards, no margin right since gap handles spacing */
+.card {
+  flex: 0 0 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 3px solid  rgb(63, 81, 238);
+  flex-shrink: 0;
+}
+
+.card h3 {
+  margin: 20px 15px 10px 15px;
+  color: rgb(63, 81, 238);
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0 15px 20px 15px;
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color:  rgb(63, 81, 238);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 15px  rgb(63, 81, 238);
+  transition: background-color 0.3s ease;
+  z-index: 2;
+  user-select: none;
+}
+
+.slider-btn:hover {
+  background-color:  rgb(63, 81, 238);
+
+.prev-btn {
+  left: 5px;
+}
+
+}
+.next-btn {
+  right: 5px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .card {
+    flex: 0 0 260px;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    flex: 0 0 220px;
+  }
+
+  .slider-btn {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
+.site-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 100px;      /* adjust size as needed */
+  height: auto;
+  z-index: 1050;     /* high enough to stay on top */
+  cursor: pointer;   /* makes it look clickable */
+  transition: transform 0.3s ease;
+}
+
+.site-logo:hover {
+  transform: scale(1.1); /* subtle zoom effect on hover */
+}
+
+
+
+
+.site-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 100px;      /* adjust size as needed */
+  height: auto;
+  z-index: 1050;     /* high enough to stay on top */
+  cursor: pointer;   /* makes it look clickable */
+  transition: transform 0.3s ease;
+}
+
+.site-logo:hover {
+  transform: scale(1.1); /* subtle zoom effect on hover */
+}
+
+
+
